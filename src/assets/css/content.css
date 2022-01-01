@@ -1,0 +1,153 @@
+@charset "UTF-8";
+:root {
+  --bg: #0d47a1;
+  --dark-bg: #062b63;
+  --line: #fafafa;
+  --normal-blue: #39bae6; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+
+/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+::-webkit-scrollbar-track {
+  background: #333; }
+
+/* degrade para a barra vertical */
+::-webkit-scrollbar-thumb {
+  background: #2e9dd8;
+  background: -moz-linear-gradient(top, #e57373 0%, #d32f2f 25%, #d32f2f 50%, #d50000 76%, #d50000 100%);
+  background: -webkit-linear-gradient(top, #e57373 0%, #d32f2f 25%, #d50000 50%, #d50000 76%, #d50000 100%);
+  background: linear-gradient(to bottom, #e57373 0%, #d32f2f 25%, #d50000 50%, #d50000 76%, #d50000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#333333',GradientType=0 ); }
+
+/* Header. */
+header {
+  background: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 5px 10px;
+  z-index: 5; }
+  header .logo {
+    margin-left: 10px;
+    position: relative;
+    font-weight: 600;
+    color: var(--line);
+    text-decoration: none;
+    font-size: 1.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s; }
+    header .logo:hover {
+      filter: brightness(0.7); }
+  header #mobile-menu {
+    display: none;
+    cursor: pointer; }
+    header #mobile-menu div {
+      width: 2rem;
+      height: 2px;
+      background: whitesmoke;
+      margin: 0.5rem;
+      transition: 0.3s; }
+  header ul {
+    margin-right: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header ul li {
+      margin-right: 25px;
+      position: relative;
+      list-style: none; }
+      header ul li a {
+        position: relative;
+        margin-right: 30px;
+        text-decoration: none;
+        color: var(--line);
+        letter-spacing: 1.3px;
+        font-weight: 500;
+        transition: 0.3s; }
+        header ul li a:hover {
+          color: #fff;
+          background-color: #d11212;
+          padding: 8px;
+          border-radius: 5px;
+          border-bottom: 1px solid var(--line); }
+  header.sticky {
+    padding: 10px;
+    background-color: whitesmoke; }
+    header.sticky a, header.sticky .logo {
+      color: var(--bg); }
+
+/* --- Mobile menu --- */
+@media (max-width: 999px) {
+  /* Header */
+  header {
+    /* Menu mobile dentro de nav */
+    /* Sticky deixa de existir */ }
+    header nav {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: var(--bg);
+      width: 50vw;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100vh;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in; }
+    header ul {
+      flex-direction: column;
+      position: relative;
+      top: 110px; }
+      header ul li {
+        margin: 25px;
+        opacity: 0; }
+    header #mobile-menu {
+      display: block !important;
+      cursor: pointer;
+      position: relative;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in; }
+    header.sticky {
+      padding: 10px !important;
+      background: var(--bg) !important; }
+      header.sticky a, header.sticky .logo {
+        color: var(--line) !important; }
+
+  /* Navbar responsiva */
+  nav.active {
+    transform: translateX(0); }
+    nav.active #mobile-menu {
+      transform: translateX(-55%);
+      left: 100%; }
+
+  #mobile-menu.active .line-1 {
+    transform: rotate(-45deg) translate(-8px, 8px); }
+
+  #mobile-menu.active .line-2 {
+    opacity: 0; }
+
+  #mobile-menu.active .line-3 {
+    transform: rotate(45deg) translate(-5px, -7px); }
+
+  /* Animação nos li's dentro de nav */
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px); }
+    to {
+      opacity: 1;
+      transform: translateX(0); } } }
+
+/*# sourceMappingURL=content.css.map */

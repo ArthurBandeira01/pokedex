@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PokeDex</title>
+  <script src="https://kit.fontawesome.com/a7cf753026.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/assets/css/style.css" />
+  <link rel="stylesheet" href="./src/assets/css/content.css">
+  <link rel="icon" href="./src/assets/favicon.ico">
+</head>
+<body id="scrollbar">
+  <header id="header"><!-- header -->
+    <a class="logo" href="index.html">
+      <img src="./src/assets/img/pok2.png" alt="Pokebola" class="img-logo">
+    </a><!--logo-->
+
+    <nav id="nav"><!-- nav -->
+      <div id="mobile-menu">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+
+      <ul>
+        <li>
+          <a href="./index.html"><i class="fas fa-gamepad"></i> PokeDéx</a>
+        </li>
+        <li>
+          <a href="./public/sobre.html"><i class="fas fa-book-open"></i> About</a>
+        </li>
+        <li>
+          <a href="./public/contato.html"><i class="fab fa-teamspeak"></i> Contact</a>
+        </li>
+      </ul>
+    </nav><!-- /nav -->
+  </header><!-- /header -->
+  <div class="container">
+    <div class="poke-title">
+      <img src="./src/assets/img/pokedexrbg.png" class="pokedex-img" alt="PokeDex">
+      <h1>Pokedéx</h1>
+    </div><!--poke-title-->
+    
+    <ul data-js="pokedex" class="pokedex"></ul>
+  </div>
+  
+  <script src="./src/assets/js/app.js"></script>
+  <script src="./src/assets/js/jquery.js"></script>
+	<script src="./src/assets/js/index.js"></script>
+  <script src="./src/assets/js/scroll.js"></script>
+</body>
+</html>
